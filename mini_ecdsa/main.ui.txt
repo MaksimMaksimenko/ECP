@@ -1,0 +1,1057 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface>
+  <object class="ttk.Frame" id="mainwindow">
+    <property name="height">200</property>
+    <property name="padding">5</property>
+    <property name="width">200</property>
+    <layout>
+      <property name="column">0</property>
+      <property name="propagate">True</property>
+      <property name="row">0</property>
+    </layout>
+    <child>
+      <object class="ttk.Label" id="label_p">
+        <property name="font">{Arial} 14 {}</property>
+        <property name="text" translatable="yes">Параметр p:</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">2</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="label_a">
+        <property name="font">{Arial} 14 {}</property>
+        <property name="text" translatable="yes">Параметр a:</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">3</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="label_b">
+        <property name="font">{Arial} 14 {}</property>
+        <property name="text" translatable="yes">Параметр b:</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">4</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Entry" id="entry_p">
+        <property name="font">{Arial} 14 {}</property>
+        <property name="width">30</property>
+        <layout>
+          <property name="column">1</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">2</property>
+          <property name="sticky">n</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Entry" id="entry_a">
+        <property name="font">{Arial} 14 {}</property>
+        <property name="width">30</property>
+        <layout>
+          <property name="column">1</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">3</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Entry" id="entry_b">
+        <property name="font">{Arial} 14 {}</property>
+        <property name="width">30</property>
+        <layout>
+          <property name="column">1</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">4</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Button" id="button_ok">
+        <property name="command">on_button_ok_clicked</property>
+        <property name="font">{Arial} 14 {}</property>
+        <property name="text" translatable="yes">OK</property>
+        <property name="width">10</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">6</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Button" id="button_clear">
+        <property name="command">on_button_clear_clicked</property>
+        <property name="font">{Arial} 14 {}</property>
+        <property name="text" translatable="yes">Очистить</property>
+        <property name="width">10</property>
+        <layout>
+          <property name="column">1</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">6</property>
+          <property name="sticky">e</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Button" id="button_help">
+        <property name="command">show_help</property>
+        <property name="font">{Arial} 14 {}</property>
+        <property name="justify">left</property>
+        <property name="text" translatable="yes">Руководство</property>
+        <layout>
+          <property name="column">1</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">6</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Label" id="podskazka">
+        <property name="font">{Arial} 12 {bold}</property>
+        <property name="height">3</property>
+        <property name="height">3</property>
+        <property name="text" translatable="yes">Введите параметры используемой эллиптической кривой</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="columnspan">2</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Label" id="Label_2">
+        <property name="font">{Arial} 14 {}</property>
+        <property name="foreground">#ff0000</property>
+        <property name="text" translatable="yes">y^2=x^3+a*x+b(mod p)
+(p-простое, a&lt;p, b&lt;p)</property>
+        <property name="width">18</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="columnspan">2</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">1</property>
+        </layout>
+      </object>
+    </child>
+  </object>
+  <object class="tk.Toplevel" id="genpoint">
+    <property name="height">200</property>
+    <property name="padx">5</property>
+    <property name="pady">5</property>
+    <property name="title" translatable="yes">Выбор генерирующей точки</property>
+    <property name="width">200</property>
+    <child>
+      <object class="tk.Label" id="label_1">
+        <property name="font">{Arial} 14 {}</property>
+        <property name="text" translatable="yes">Выберите генерирующую точку</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="columnspan">2</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Combobox" id="combo">
+        <property name="state">readonly</property>
+        <property name="takefocus">true</property>
+        <property name="textvariable">string:box_values</property>
+        <property name="width">42</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="columnspan">2</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">1</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Button" id="gpbutton_ok">
+        <property name="command">on_gpbutton_ok_clicked</property>
+        <property name="font">{Arial} 14 {}</property>
+        <property name="text" translatable="yes">OK</property>
+        <property name="width">10</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">2</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Button" id="gpbutton_cancel">
+        <property name="command">on_gpbutton_cancel_clicked</property>
+        <property name="font">{Arial} 14 {}</property>
+        <property name="text" translatable="yes">Отмена</property>
+        <property name="width">10</property>
+        <layout>
+          <property name="column">1</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">2</property>
+          <property name="sticky">e</property>
+        </layout>
+      </object>
+    </child>
+  </object>
+  <object class="tk.Toplevel" id="ecdsamain">
+    <property name="height">200</property>
+    <property name="padx">5</property>
+    <property name="pady">5</property>
+    <property name="title" translatable="yes">Работа с ЭЦП</property>
+    <property name="width">200</property>
+    <child>
+      <object class="tk.Label" id="formula_label">
+        <property name="font">{Arial} 14 {}</property>
+        <property name="foreground">#ff0000</property>
+        <property name="width">30</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="columnspan">2</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">1</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Button" id="generate_sign_button">
+        <property name="command">open_ecdsa_generation</property>
+        <property name="font">{Arial} 14 {}</property>
+        <property name="text" translatable="yes">Генерация подписи</property>
+        <property name="width">30</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="columnspan">2</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">2</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Button" id="verify_sign_button">
+        <property name="command">verify_sign</property>
+        <property name="font">{Arial} 14 {}</property>
+        <property name="text" translatable="yes">Проверка подписи</property>
+        <property name="width">30</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="columnspan">2</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">3</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Label" id="TitleLabel">
+        <property name="font">{Arial} 14 {bold}</property>
+        <property name="text" translatable="yes">Выберите необходимую операцию</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="columnspan">3</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+        </layout>
+      </object>
+    </child>
+  </object>
+  <object class="tk.Toplevel" id="input_text">
+    <property name="height">200</property>
+    <property name="padx">5</property>
+    <property name="pady">5</property>
+    <property name="title" translatable="yes">Введите текст</property>
+    <property name="width">200</property>
+    <child>
+      <object class="tk.Text" id="text_box">
+        <property name="font">{Arial} 14 {}</property>
+        <property name="height">6</property>
+        <property name="insertofftime">0</property>
+        <property name="width">40</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="columnspan">3</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">1</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Button" id="text_button_ok">
+        <property name="command">text_hashing</property>
+        <property name="font">{Arial} 14 {}</property>
+        <property name="text" translatable="yes">OK</property>
+        <property name="width">10</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">3</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Button" id="text_button_cancel">
+        <property name="command">text_button_cancel</property>
+        <property name="font">{Arial} 14 {}</property>
+        <property name="text" translatable="yes">Отмена</property>
+        <layout>
+          <property name="column">2</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">3</property>
+          <property name="sticky">e</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Button" id="text_button_hash">
+        <property name="command">text_generate</property>
+        <property name="font">{Arial} 14 {}</property>
+        <property name="text" translatable="yes">Расчитать хэш</property>
+        <property name="width">15</property>
+        <layout>
+          <property name="column">1</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">3</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Text" id="text_box_hashed">
+        <property name="font">{Arial} 14 {}</property>
+        <property name="height">6</property>
+        <property name="width">40</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="columnspan">3</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">2</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Scrollbar" id="scrollbar1">
+        <property name="orient">vertical</property>
+        <property name="width">10</property>
+        <layout>
+          <property name="column">2</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">47</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">1</property>
+          <property name="rowspan">1</property>
+          <property name="sticky">e</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Label" id="Label_22">
+        <property name="font">{Arial} 12 {bold}</property>
+        <property name="text" translatable="yes">Введите текст сообщения</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="columnspan">3</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+        </layout>
+      </object>
+    </child>
+  </object>
+  <object class="tk.Toplevel" id="verify_sign">
+    <property name="height">200</property>
+    <property name="title" translatable="yes">Проверка ЭЦП</property>
+    <property name="width">200</property>
+    <child>
+      <object class="tk.Entry" id="open_key_value_1">
+        <property name="font">{Arial} 14 {}</property>
+        <property name="width">15</property>
+        <layout>
+          <property name="column">1</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">2</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Label" id="open_key_label_1">
+        <property name="font">{Arial} 14 {}</property>
+        <property name="text" translatable="yes">Открытый ключ (Q):</property>
+        <property name="width">15</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">2</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Entry" id="r_value">
+        <property name="font">{Arial} 14 {}</property>
+        <property name="width">15</property>
+        <layout>
+          <property name="column">1</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">3</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Label" id="r_label">
+        <property name="font">{Arial} 14 {}</property>
+        <property name="text" translatable="yes">Параметр r:</property>
+        <property name="width">15</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">3</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Label" id="s_label">
+        <property name="font">{Arial} 14 {}</property>
+        <property name="justify">left</property>
+        <property name="text" translatable="yes">Параметр s:</property>
+        <property name="width">15</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">4</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Entry" id="s_value">
+        <property name="font">{Arial} 14 {}</property>
+        <property name="width">15</property>
+        <layout>
+          <property name="column">1</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">4</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Button" id="button_ok_1">
+        <property name="command">do_verify_sign</property>
+        <property name="font">{Arial} 14 {}</property>
+        <property name="text" translatable="yes">Проверить</property>
+        <property name="width">10</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">5</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Button" id="button_cancel">
+        <property name="command">close_virify_widget</property>
+        <property name="font">{Arial} 14 {}</property>
+        <property name="text" translatable="yes">Отмена</property>
+        <property name="width">10</property>
+        <layout>
+          <property name="column">1</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">5</property>
+          <property name="sticky">e</property>
+        </layout>
+      </object>
+    </child>
+  </object>
+  <object class="tk.Toplevel" id="ecdsa_generation">
+    <property name="height">200</property>
+    <property name="title" translatable="yes">Генерация ЭЦП</property>
+    <property name="width">200</property>
+    <child>
+      <object class="tk.Label" id="TitleLabel_1">
+        <property name="font">{Arial} 14 {}</property>
+        <property name="text" translatable="yes">Генерация ЭЦП</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="columnspan">2</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Label" id="FormulaLabel">
+        <property name="font">{Arial} 14 {}</property>
+        <property name="foreground">#ff0000</property>
+        <property name="text" translatable="yes">
+</property>
+        <property name="width">32</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="columnspan">2</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">1</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Label" id="ECOrderLabel">
+        <property name="font">{Arial} 14 {}</property>
+        <property name="text" translatable="yes">Порядок ЭК:</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">2</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Label" id="GenPointLabel">
+        <property name="font">{Arial} 14 {}</property>
+        <property name="text" translatable="yes">Генерирующая точка:</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">3</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Label" id="GenPointOrderLabel">
+        <property name="font">{Arial} 14 {}</property>
+        <property name="text" translatable="yes">Порядок ген. точки:</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">4</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Label" id="RandomKLabel">
+        <property name="font">{Arial} 14 {}</property>
+        <property name="text" translatable="yes">Случайное число k:</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">5</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Label" id="OpenKeyLabel">
+        <property name="font">{Arial} 14 {}</property>
+        <property name="text" translatable="yes">Открытый ключ:</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">6</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Label" id="ECOrderLabelValue">
+        <property name="font">{Arial} 14 {}</property>
+        <property name="width">16</property>
+        <layout>
+          <property name="column">1</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">2</property>
+          <property name="sticky">e</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Label" id="GenPointLabelValue">
+        <property name="font">{Arial} 14 {}</property>
+        <property name="width">16</property>
+        <layout>
+          <property name="column">1</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">3</property>
+          <property name="sticky">e</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Label" id="GenPointOrderLabelValue">
+        <property name="font">{Arial} 14 {}</property>
+        <property name="width">16</property>
+        <layout>
+          <property name="column">1</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">4</property>
+          <property name="sticky">e</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Label" id="RandomKLabelValue">
+        <property name="font">{Arial} 14 {}</property>
+        <property name="width">16</property>
+        <layout>
+          <property name="column">1</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">5</property>
+          <property name="sticky">e</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Label" id="OpenKeyLabelValue">
+        <property name="font">{Arial} 14 {}</property>
+        <property name="width">16</property>
+        <layout>
+          <property name="column">1</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">6</property>
+          <property name="sticky">e</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Button" id="ButtonGenKey">
+        <property name="command">generate_keys</property>
+        <property name="font">{Arial} 14 {}</property>
+        <property name="text" translatable="yes">Генерация ключа</property>
+        <property name="width">18</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="columnspan">2</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">7</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Button" id="HashButton">
+        <property name="command">hashing_text</property>
+        <property name="font">{Arial} 14 {}</property>
+        <property name="text" translatable="yes">Хэширование текста</property>
+        <property name="width">18</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="columnspan">2</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">8</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Button" id="SignButton">
+        <property name="command">generate_sign</property>
+        <property name="font">{Arial} 14 {}</property>
+        <property name="text" translatable="yes">Генерация подписи</property>
+        <property name="width">18</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="columnspan">2</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">9</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Button" id="ExitButton">
+        <property name="command">close_ecdsa_generation</property>
+        <property name="font">{Arial} 14 {}</property>
+        <property name="text" translatable="yes">Выход</property>
+        <property name="width">18</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="columnspan">2</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">10</property>
+        </layout>
+      </object>
+    </child>
+  </object>
+  <object class="tk.Toplevel" id="ecdsa_verify">
+    <property name="height">200</property>
+    <property name="title" translatable="yes">Проверка ЭЦП</property>
+    <property name="width">200</property>
+    <child>
+      <object class="tk.Label" id="TitleLabel_3">
+        <property name="font">{Arial} 14 {}</property>
+        <property name="text" translatable="yes">Проверка ЭЦП</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="columnspan">2</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Label" id="FormulaLabel_4">
+        <property name="font">{Arial} 14 {}</property>
+        <property name="foreground">#ff0000</property>
+        <property name="width">22</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="columnspan">3</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">1</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Label" id="OrderLabel">
+        <property name="font">{Arial} 14 {}</property>
+        <property name="text" translatable="yes">Порядок ЭК:</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">2</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Label" id="GenPointLabel_5">
+        <property name="font">{Arial} 14 {}</property>
+        <property name="text" translatable="yes">Генерирующая точка:</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">3</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Label" id="GenPointOrderLabel_6">
+        <property name="font">{Arial} 14 {}</property>
+        <property name="text" translatable="yes">Порядок генерирующей точки:</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">4</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Label" id="OrderLabelValue">
+        <property name="font">{Arial} 14 {}</property>
+        <property name="width">8</property>
+        <layout>
+          <property name="column">1</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">2</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Label" id="GenPointLabelValue_7">
+        <property name="font">{Arial} 14 {}</property>
+        <property name="width">8</property>
+        <layout>
+          <property name="column">1</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">3</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Label" id="GenPointOrderLabelValue_1">
+        <property name="font">{Arial} 14 {}</property>
+        <property name="width">8</property>
+        <layout>
+          <property name="column">1</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">4</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Button" id="HashButton_1">
+        <property name="command">hashing_text</property>
+        <property name="font">{Arial} 14 {}</property>
+        <property name="text" translatable="yes">Хэширование текста</property>
+        <property name="width">18</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="columnspan">2</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">8</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Button" id="CheckButton">
+        <property name="command">open_verify_sign</property>
+        <property name="font">{Arial} 14 {}</property>
+        <property name="text" translatable="yes">Проверка подписи</property>
+        <property name="width">18</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="columnspan">2</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">9</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Button" id="ExitButton_2">
+        <property name="font">{Arial} 14 {}</property>
+        <property name="text" translatable="yes">Выход</property>
+        <property name="width">18</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="columnspan">2</property>
+          <property name="ipadx">5</property>
+          <property name="ipady">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">10</property>
+        </layout>
+      </object>
+    </child>
+  </object>
+</interface>
